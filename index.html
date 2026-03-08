@@ -1,90 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drill Developers | Earth Moving Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        .hero-gradient {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Simple Website</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+header{
+background:#111;
+color:white;
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+margin:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:16px;
+}
+
+nav a:hover{
+color:#00c3ff;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(to right,#1e3c72,#2a5298);
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h2{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.hero button{
+padding:12px 25px;
+border:none;
+background:#00c3ff;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.hero button:hover{
+background:#0099cc;
+}
+
+section{
+padding:60px 80px;
+}
+
+.about{
+background:white;
+}
+
+.services{
+background:#f0f0f0;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:20px;
+flex:1;
+min-width:200px;
+border-radius:8px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+.contact{
+background:white;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button.submit{
+background:#111;
+color:white;
+padding:10px 20px;
+border:none;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
 
-    <nav class="fixed w-full z-50 bg-white shadow-md py-4 px-8 flex justify-between items-center">
-        <h1 class="text-2xl font-black text-yellow-600 tracking-tighter">DRILL DEVELOPERS</h1>
-        <a href="tel:+1234567890" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full transition duration-300">
-            Call Now
-        </a>
-    </nav>
+<body>
 
-    <section class="h-screen hero-gradient flex items-center justify-center text-center px-4">
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <h2 class="text-5xl md:text-7xl font-bold text-white mb-6">Expert Earth Moving</h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Precision, Power, and Performance. We provide top-tier machinery for all your construction needs.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#rates" class="bg-yellow-500 text-black px-8 py-3 rounded font-bold text-lg hover:bg-yellow-400 transition">View Rates</a>
-                <a href="#fleet" class="border-2 border-white text-white px-8 py-3 rounded font-bold text-lg hover:bg-white hover:text-black transition">Our Fleet</a>
-            </div>
-        </div>
-    </section>
+<header>
+<h1>MyWebsite</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <section id="rates" class="py-20 px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-down">
-            <h2 class="text-4xl font-bold mb-4">Our Fleet & Hourly Rates</h2>
-            <p class="text-gray-600">Transparent pricing for premium machinery.</p>
-        </div>
+<section class="hero">
+<h2>Welcome to My Website</h2>
+<p>Simple Frontend Website using HTML, CSS & JavaScript</p>
+<button onclick="showMessage()">Click Me</button>
+</section>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500" data-aos="flip-left" data-aos-delay="100">
-                <div class="text-yellow-600 mb-4 text-4xl italic font-black">JCB</div>
-                <h3 class="text-2xl font-bold mb-2">Backhoe Loader</h3>
-                <p class="text-gray-500 mb-6">Perfect for digging, trenching, and general site cleanup.</p>
-                <div class="text-3xl font-bold text-gray-800">$45 <span class="text-sm font-normal text-gray-500">/ hour</span></div>
-            </div>
+<section class="about" id="about">
+<h2>About Us</h2>
+<p>
+This is a simple website created using only HTML, CSS, and JavaScript.
+You can use it as a starter template for your projects.
+</p>
+</section>
 
-            <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500" data-aos="flip-left" data-aos-delay="300">
-                <div class="text-yellow-600 mb-4 text-4xl italic font-black">HITACHI</div>
-                <h3 class="text-2xl font-bold mb-2">Excavator</h3>
-                <p class="text-gray-500 mb-6">Heavy-duty excavation and deep digging capabilities.</p>
-                <div class="text-3xl font-bold text-gray-800">$65 <span class="text-sm font-normal text-gray-500">/ hour</span></div>
-            </div>
+<section class="services" id="services">
+<div class="card">
+<h3>Web Design</h3>
+<p>Modern and responsive website design.</p>
+</div>
 
-            <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-yellow-500" data-aos="flip-left" data-aos-delay="500">
-                <div class="text-yellow-600 mb-4 text-4xl italic font-black">TIPPER</div>
-                <h3 class="text-2xl font-bold mb-2">Dump Truck</h3>
-                <p class="text-gray-500 mb-6">Efficient material transport and waste removal.</p>
-                <div class="text-3xl font-bold text-gray-800">$35 <span class="text-sm font-normal text-gray-500">/ hour</span></div>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<h3>Development</h3>
+<p>Frontend and backend web development.</p>
+</div>
 
-    <section class="bg-yellow-500 py-16 px-8 text-center">
-        <div data-aos="zoom-in">
-            <h2 class="text-4xl font-black mb-6">READY TO MOVE THE EARTH?</h2>
-            <p class="text-xl mb-8 font-medium">Contact Drill Developers today for a custom quote or immediate booking.</p>
-            <a href="tel:+1234567890" class="bg-black text-white px-12 py-4 rounded-full text-2xl font-bold hover:scale-105 transition-transform inline-block">
-                📞 +1 (234) 567-890
-            </a>
-        </div>
-    </section>
+<div class="card">
+<h3>SEO</h3>
+<p>Improve your website ranking on search engines.</p>
+</div>
+</section>
 
-    <footer class="bg-gray-900 text-white py-10 px-8 text-center">
-        <p>&copy; 2024 Drill Developers. All rights reserved.</p>
-    </footer>
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize Animations
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
-    </script>
+<form onsubmit="return submitForm()">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button class="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 MyWebsite | All Rights Reserved</p>
+</footer>
+
+<script>
+
+function showMessage(){
+alert("Thanks for visiting the website!");
+}
+
+function submitForm(){
+alert("Message sent successfully!");
+return false;
+}
+
+</script>
+
 </body>
 </html>
